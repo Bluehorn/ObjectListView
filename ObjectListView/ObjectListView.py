@@ -616,11 +616,13 @@ class ObjectListView(wx.ListCtrl):
             html = "<table><tr>" + "</tr><tr>".join(lines) + "</tr></table>"
             self._PutTextAndHtmlToClipboard(txt, html)
         except ImportError:
-            cb = wx.Clipboard()
+            cb = wx.TheClipboard
             if cb.Open():
-                cb.SetData(wx.TextDataObject(txt))
-                cb.Flush()
-                cb.Close()
+                try:
+                    cb.SetData(wx.TextDataObject(txt))
+                    cb.Flush()
+                finally:
+                    cb.Close()
 
     def _GetValuesAsMultiList(self, objects):
         """
