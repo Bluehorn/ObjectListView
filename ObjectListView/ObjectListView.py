@@ -2566,6 +2566,7 @@ class FastObjectListView(AbstractVirtualObjectListView):
         """
         selection = self.GetSelectedObjects()
         self._SortObjects()
+        self._BuildInnerList()
 
         self.SelectObjects(selection)
         self.RefreshObjects()
