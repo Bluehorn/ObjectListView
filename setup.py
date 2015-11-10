@@ -1,9 +1,10 @@
 import sys
 
 NAME = "ObjectListView"
-VERSION = "1.2.2014.02.23"
+VERSION = "1.2.2014.12.02+scale1"
 URL = "http://objectlistview.sourceforge.net/python"
-DOWNLOAD_URL = "http://objectlistview.sourceforge.net/samples/ObjectListView-1.2.zip"
+URL = "https://github.com/Bluehorn/ObjectListView"
+DOWNLOAD_URL = "https://github.com/Bluehorn/ObjectListView/zipball/5d45993453c702298103a376b0b7e539b7c33ea6"
 LICENSE = "wxWindows"
 AUTHOR = "Phillip Piper"
 AUTHOR_EMAIL = "phillip.piper@gmail.com"
